@@ -1,0 +1,19 @@
+1. What Happens When We Call an API?
+
+When a client calls an API, several steps can occur:
+
+The client sends an HTTP request.
+
+The request reaches the server.
+
+The server validates the request.
+
+The server executes the required logic.
+
+The server retrieves or updates data if necessary.
+
+The server sends an HTTP response.
+
+The client processes and displays the response.
+
+Example: A frontend application requests a list of products from a backend API. The backend retrieves the products and returns them as JSON.
