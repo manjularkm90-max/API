@@ -1,0 +1,119 @@
+1. What is an API?
+
+API stands for Application Programming Interface.
+
+An API allows two software applications to communicate with each other.
+
+Real-Life Example
+
+When we use a weather application:
+
+We open the application.
+
+The application requests weather information from a server through an API.
+
+The server sends the weather data.
+
+The application displays the temperature and weather conditions.
+
+2. How Does an API Work?
+
+The basic API communication process:
+
+Client: Sends a request.
+
+API: Provides an interface for communication.
+
+Server: Processes the request.
+
+Response: Returns data or an error.
+
+3. Types of API
+
+REST API
+
+SOAP API
+
+GraphQL API
+
+WebSocket API
+
+4. Important API Terms
+
+Endpoint: A URL or route used to access a resource.
+
+Request: Information sent to an API.
+
+Response: Information returned by an API.
+
+HTTP method: Specifies an operation such as GET or POST.
+
+JSON: A common format for exchanging data.
+
+Status code: Indicates the result of an HTTP request.
+
+5. Example API
+
+Example endpoint:
+
+https://jsonplaceholder.typicode.com/users/1
+
+This public testing API returns sample user data.
+
+Example response:
+
+{
+  "id": 1,
+  "name": "Leanne Graham",
+  "username": "Bret"
+}
+
+6. Advantages of APIs
+
+Enable communication between applications.
+
+Support integration with third-party services.
+
+Encourage code reuse.
+
+Separate frontend and backend responsibilities.
+
+Help applications exchange data.
+
+7. Interview Questions
+
+Q1. What is an API?
+
+An API is an interface that allows different software applications to communicate.
+
+Q2. What is an API endpoint?
+
+An endpoint is a URL or route used to access a resource or perform an operation.
+
+Q3. What is JSON?
+
+JSON stands for JavaScript Object Notation. It is a lightweight data-exchange format.
+
+Q4. What is an HTTP request?
+
+An HTTP request is a message sent by a client to a server to retrieve or modify information.
+
+Q5. What is a REST API?
+
+A REST API is an API designed around REST architectural principles, commonly using HTTP methods to work with resources.
+
+Day 1 Summary
+
+Today I learned:
+
+API definition
+
+Client-server communication
+
+API endpoints
+
+JSON responses
+
+Common API types
+
+API interview questions
