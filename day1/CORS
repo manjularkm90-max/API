@@ -1,0 +1,17 @@
+CORS stands for Cross-Origin Resource Sharing.
+
+Browsers use CORS rules to control whether a webpage can access resources from another origin.
+
+An origin consists of a scheme, hostname, and port.
+
+Example:
+
+Frontend: http://localhost:5173
+
+Backend: http://localhost:3000
+
+These are different origins because their ports differ.
+
+The backend may need to return suitable CORS headers to permit the frontend origin.
+
+Important: CORS is a browser security mechanism. It is not a replacement for authentication or authorization.
