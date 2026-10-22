@@ -1,0 +1,13 @@
+Authentication
+
+Authentication checks who the user is.
+
+Example: Logging in with a username and password.
+
+Authorization
+
+Authorization checks what an authenticated user is allowed to do.
+
+Example: Only an administrator can delete another user's account.
+
+Interview tip: Authentication = identity; authorization = permissions.
