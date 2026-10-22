@@ -1,0 +1,20 @@
+Use HTTPS in production.
+
+Validate and sanitize incoming data.
+
+Authenticate users when required.
+
+Enforce authorization on protected resources.
+
+Never expose passwords, API secrets, or private tokens.
+
+Use rate limiting to reduce abuse.
+
+Return safe error messages.
+
+Avoid logging sensitive data.
+
+Keep dependencies updated.
+
+Never trust client-side validation alone.
+
