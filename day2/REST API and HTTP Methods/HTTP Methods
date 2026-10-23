@@ -35,3 +35,59 @@ DELETE
 Remove data
 
 Delete a student
+GET
+
+GET retrieves information from the server.
+
+Example:
+GET /students
+
+Expected result: a list of students.
+
+POST
+
+POST creates a new resource.
+
+Example:
+POST /students
+
+Request body:
+
+{
+  "name": "Manjula",
+  "course": "Information Technology"
+}
+
+PUT
+
+PUT replaces the existing resource with the submitted data.
+
+Example:
+PUT /students/1
+
+Request body:
+
+{
+  "name": "Manjula R",
+  "course": "Information Technology"
+}
+
+PATCH
+
+PATCH updates only the fields provided in the request.
+
+Example:
+PATCH /students/1
+
+Request body:
+
+{
+  "name": "Manjula R"
+}
+
+DELETE
+
+DELETE removes a resource.
+
+Example:
+DELETE /students/1
