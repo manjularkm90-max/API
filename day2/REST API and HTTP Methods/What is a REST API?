@@ -1,0 +1,13 @@
+REST stands for Representational State Transfer. A REST API allows two applications to communicate using HTTP requests.
+
+For example, in a student management application:
+
+Get all students.
+
+Add a new student.
+
+Update student details.
+
+Delete a student.
+
+A REST API usually exchanges data in JSON format.
