@@ -1,0 +1,9 @@
+Client-server architecture: The frontend sends requests, and the backend processes them.
+
+Statelessness: Each request should contain the information needed to process it; the server should not depend on hidden session state between requests.
+
+Resource-based URLs: Use names such as /students rather than action names such as /getStudents.
+
+Consistent HTTP methods: Use GET to read, POST to create, PUT/PATCH to update, and DELETE to remove.
+
+JSON responses: JSON is a common format for sending API data.
