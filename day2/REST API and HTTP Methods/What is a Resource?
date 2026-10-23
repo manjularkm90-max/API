@@ -1,0 +1,11 @@
+A resource is the data or object that an API manages.
+
+Examples:
+
+/students — student collection
+
+/students/1 — student with ID 1
+
+/products — product collection
+
+/users/5 — user with ID 5
