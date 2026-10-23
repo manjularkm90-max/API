@@ -1,0 +1,27 @@
+Status code
+
+Meaning
+
+200
+
+OK — request successful
+
+201
+
+Created — resource created
+
+204
+
+No Content — successful request with no response body
+
+400
+
+Bad Request — invalid request data
+
+404
+
+Not Found — resource does not exist
+
+500
+
+Internal Server Error — unexpected server problem
