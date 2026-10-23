@@ -1,0 +1,37 @@
+HTTP methods describe what action the client wants the server to perform.
+
+Method
+
+Purpose
+
+Example
+
+GET
+
+Read data
+
+Get all students
+
+POST
+
+Create new data
+
+Add a student
+
+PUT
+
+Replace an existing resource
+
+Replace student details
+
+PATCH
+
+Update selected fields
+
+Update only the student's name
+
+DELETE
+
+Remove data
+
+Delete a student
