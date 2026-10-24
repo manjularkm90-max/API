@@ -1,0 +1,6 @@
+An operation is idempotent if repeating the same request produces the same intended final state as performing it once.
+- GET: normally idempotent; it reads data.
+- PUT: normally idempotent; repeating the same replacement produces the same resource state.
+- DELETE: normally idempotent in terms of final state; after the resource is deleted, repeating the deletion does not restore it.
+- POST: not necessarily idempotent; repeating a create request might create duplicate records.
+- PATCH: depends on the operation; setting a field to a fixed value is often idempotent, while incrementing a value is not.
