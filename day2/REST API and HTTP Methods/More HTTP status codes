@@ -1,0 +1,14 @@
+Code	Meaning	When to use
+200	OK	Successful request
+201	Created	New resource created
+202	Accepted	Request accepted for processing
+204	No Content	Success with no response body
+400	Bad Request	Invalid input
+401	Unauthorized	Missing or invalid authentication
+403	Forbidden	User lacks permission
+404	Not Found	Resource not found
+409	Conflict	Duplicate or conflicting data
+422	Unprocessable Content	Request understood but validation fails
+429	Too Many Requests	Rate limit exceeded
+500	Internal Server Error	Unexpected server-side error
+503	Service Unavailable	Server temporarily unavailable
