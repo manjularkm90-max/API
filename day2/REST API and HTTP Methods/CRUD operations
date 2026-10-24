@@ -1,0 +1,14 @@
+CRUD means the four basic operations used to manage data.
+CRUD	HTTP method	Example
+Create	POST	Add a new user
+Read	GET	View all users
+Update	PUT / PATCH	Edit user details
+Delete	DELETE	Remove a user
+
+Example for an employee API:
+- GET /employees — get all employees
+- GET /employees/101 — get employee 101
+- POST /employees — add an employee
+- PUT /employees/101 — replace employee 101's details
+- PATCH /employees/101 — update selected employee fields
+- DELETE /employees/101 — delete employee 101
