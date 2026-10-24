@@ -1,0 +1,15 @@
+Path parameters identify a particular resource. Query parameters usually filter, sort or paginate results.
+GET /employees/101
+Here, 101 is a path parameter.
+GET /employees?department=IT&sort=salary
+Here, department and sort are query parameters.
+app.get("/employees/:id", (req, res) => {
+    res.json({ employeeId: req.params.id });
+});
+
+app.get("/employees", (req, res) => {
+    res.json({
+        department: req.query.department,
+        sort: req.query.sort
+    });
+});
