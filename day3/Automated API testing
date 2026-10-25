@@ -1,0 +1,87 @@
+Instead of manually checking every response in Postman, you can write tests that run automatically.
+
+Install the packages:
+npm install express
+npm install --save-dev jest supertest
+
+
+Create app.js:
+
+const express = require("express");
+
+const app = express();
+app.use(express.json());
+
+app.get("/api/status", (req, res) => {
+    res.status(200).json({
+        status: "success",
+        message: "API is working"
+    });
+});
+
+app.post("/api/sum", (req, res) => {
+    const { a, b } = req.body;
+
+    if (
+        typeof a !== "number" ||
+        typeof b !== "number" ||
+        !Number.isFinite(a) ||
+        !Number.isFinite(b)
+    ) {
+        return res.status(400).json({
+            message: "a and b must be numbers"
+        });
+    }
+
+    res.status(200).json({ result: a + b });
+});
+
+module.exports = app;
+
+
+
+Create app.test.js:
+
+const request = require("supertest");
+const app = require("./app");
+
+describe("API tests", () => {
+    test("GET status returns 200", async () => {
+        const response = await request(app)
+            .get("/api/status");
+
+        expect(response.status).toBe(200);
+        expect(response.body.status).toBe("success");
+    });
+
+    test("POST sum adds two numbers", async () => {
+        const response = await request(app)
+            .post("/api/sum")
+            .send({ a: 10, b: 20 });
+
+        expect(response.status).toBe(200);
+        expect(response.body.result).toBe(30);
+    });
+
+    test("POST sum rejects invalid data", async () => {
+        const response = await request(app)
+            .post("/api/sum")
+            .send({ a: "ten", b: 20 });
+
+        expect(response.status).toBe(400);
+    });
+});
+
+
+
+Add this test script inside package.json under "scripts":
+"scripts": {
+  "test": "jest"
+}
+
+
+Run:
+npm test
+
+
+Jest runs the tests, while Supertest sends HTTP requests to the Express application without requiring you to start a separate listening server.
