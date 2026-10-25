@@ -1,0 +1,16 @@
+These are two important concepts for backend developer interviews.
+- Authentication: Who are you?
+- Authorization: What are you allowed to do?
+For example, a user may be authenticated but not authorized to delete another user's account.
+Common authentication methods
+Method	Purpose
+API key	Identifies a client or application
+Bearer token	Sends an access token with a request
+JWT	A token format often used to carry signed claims
+Session cookie	Identifies a server-managed session
+
+Example authorization header:
+Authorization: Bearer YOUR_ACCESS_TOKEN
+
+
+Never commit real API keys, passwords, JWT secrets or access tokens to GitHub. Store secrets in environment variables, and validate tokens on the server. A JWT is not automatically encrypted; its payload may be readable.
