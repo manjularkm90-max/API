@@ -1,0 +1,44 @@
+1. What is API Testing?
+
+API testing is the process of checking whether an API works correctly, returns the expected data, uses the correct status codes and handles invalid requests safely.
+
+Why is API testing important?
+
+Verifies that endpoints work correctly.
+
+Checks whether the response contains the expected data.
+
+Finds errors before users experience them.
+
+Checks invalid input and missing fields.
+
+Helps verify authentication and authorization.
+
+Checks response time and reliability.
+
+Example
+
+Request:
+
+GET /api/products
+
+Expected response:
+
+{
+  "success": true,
+  "count": 2,
+  "data": [
+    {
+      "id": 1,
+      "name": "Keyboard",
+      "price": 800
+    },
+    {
+      "id": 2,
+      "name": "Mouse",
+      "price": 400
+    }
+  ]
+}
+
+Expected status code: 200 OK.
