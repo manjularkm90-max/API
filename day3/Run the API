@@ -1,0 +1,11 @@
+n your Day 3 folder, open the VS Code terminal and execute:
+npm init -y
+npm install express
+node server.js
+
+
+You should see:
+Server running at http://localhost:3000
+
+
+Keep the terminal running while testing.
