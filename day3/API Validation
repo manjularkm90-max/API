@@ -1,0 +1,26 @@
+API validation checks whether incoming data is valid before the server processes it.
+
+For a product API, validation may check:
+
+Product name is present.
+
+Price is a valid positive number.
+
+Product ID is valid.
+
+The request body contains the expected fields.
+
+Example:
+
+if (typeof name !== "string" || !name.trim()) {
+    return res.status(400).json({
+        success: false,
+        message: "Product name is required"
+    });
+}
+
+if (typeof price !== "number" || price <= 0) {
+    return res.status(400).json({
+        success: false,
+        message: "Price must be a positive number"
+    });
