@@ -1,0 +1,13 @@
+A controller handles the incoming request and prepares the HTTP response.
+
+Responsibilities:
+
+Read parameters and request data.
+
+Call the service layer.
+
+Select the appropriate HTTP status code.
+
+Send the response to the client.
+
+Controllers should avoid containing too much business logic.
