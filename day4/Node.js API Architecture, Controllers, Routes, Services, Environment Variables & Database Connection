@@ -1,0 +1,13 @@
+What is API Architecture?
+  API architecture describes how an API application is organized and how its components communicate with each other.
+
+A well-structured backend separates routing, business logic, data access and error handling.
+
+2. What is Routing?
+
+Routing determines which function should handle a particular HTTP request.
+
+Example:
+
+app.get("/products", getProducts);
+app.post("/products", createProduct);
