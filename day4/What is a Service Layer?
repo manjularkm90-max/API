@@ -1,0 +1,11 @@
+A service contains business logic, such as calculating prices, checking business rules or processing orders.
+
+Benefits:
+
+Makes code easier to reuse.
+
+Separates business logic from HTTP handling.
+
+Makes unit testing easier.
+
+Improves maintainability.
