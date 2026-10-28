@@ -1,0 +1,15 @@
+Middleware executes during the request-response lifecycle.
+
+Common uses:
+
+Logging
+
+Authentication
+
+Request validation
+
+Error handling
+
+Parsing JSON
+
+Middleware can modify the request, send a response or pass control to the next middleware.
