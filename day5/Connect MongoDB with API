@@ -1,0 +1,17 @@
+First, choose one connection method:
+- Option A — MongoDB Atlas: Cloud database. Create a cluster, database user, and configure network access. Copy the Node.js connection string from Atlas.
+- Option B — Local MongoDB: If MongoDB Server is installed and running on your computer, use the local connection string.
+MongoDB Atlas setup guide: Official MongoDB setup instructions. 
+MongoDB Docs
+
+
+Create a .env file:
+PORT=3000
+MONGODB_URI=mongodb://127.0.0.1:27017/day5_student_db
+
+
+If you use Atlas, replace the MONGODB_URI value with your actual Atlas connection string. Don't upload .env or expose your database password on GitHub.
+
+Create .gitignore:
+node_modules/
+.env
