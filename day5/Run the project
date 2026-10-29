@@ -1,0 +1,7 @@
+npm run dev
+Expected terminal output:
+MongoDB connected successfully
+Server running on port 3000
+
+
+If the database isn't connected, check whether your local MongoDB service is running or your Atlas URI and network access settings are correct.
