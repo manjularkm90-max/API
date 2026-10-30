@@ -1,0 +1,25 @@
+Step 8: Create src/app.js
+This file connects middleware and routes.
+
+const express = require("express");
+const productRoutes = require("./routes/productRoutes");
+const { notFound, errorHandler } = require("./middleware/errorHandler");
+
+const app = express();
+
+app.use(express.json());
+
+app.get("/health", (req, res) => {
+    res.json({
+        success: true,
+        message: "API is running"
+    });
+});
+
+app.use("/api/products", productRoutes);
+
+// Register after the API routes
+app.use(notFound);
+app.use(errorHandler);
+
+module.exports = app;
