@@ -1,0 +1,19 @@
+Step 6: Create src/routes/productRoutes.js
+This file defines the available product endpoints.
+
+const express = require("express");
+const controller = require("../controllers/productController");
+
+const router = express.Router();
+
+router.get("/", controller.getAll);
+router.get("/:id", controller.getById);
+router.post("/", controller.create);
+router.patch("/:id", controller.update);
+router.delete("/:id", controller.remove);
+
+module.exports = router;
+
+
+
+For this exercise, we use PATCH for partial updates. You can add a separate PUT handler when you implement full resource replacement
