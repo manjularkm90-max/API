@@ -1,0 +1,24 @@
+Step 4: Create src/services/productService.js
+The service layer manages the product data and business logic.
+
+let products = [
+    { id: 1, name: "Keyboard", price: 800 },
+    { id: 2, name: "Mouse", price: 400 }
+];
+
+let nextId = 3;
+
+function getAllProducts() {
+    return products;
+}
+
+function getProductById(id) {
+    return products.find(product => product.id === id);
+}
+
+function createProduct(name, price) {
+    const product = {
+        id: nextId++,
+        name: name.trim(),
+        price
+    };
