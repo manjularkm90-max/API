@@ -1,0 +1,4 @@
+Step 1: Initialize the project
+Open the Day 4 folder in VS Code terminal and run:
+npm init -y
+npm install express dotenv
