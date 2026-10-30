@@ -1,0 +1,23 @@
+Step 7: Create src/middleware/errorHandler.js
+This middleware handles malformed JSON and unexpected errors centrally.
+
+function notFound(req, res) {
+    res.status(404).json({
+        success: false,
+        message: "Endpoint not found"
+    });
+}
+
+function errorHandler(err, req, res, next) {
+    if (res.headersSent) {
+        return next(err);
+    }
+
+    if (err.type === "entity.parse.failed") {
+        return res.status(400).json({
+            success: false,
+            message: "Invalid JSON"
+        });
+    }
+
+    console.error(err.message);
