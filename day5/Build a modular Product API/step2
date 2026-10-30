@@ -1,0 +1,5 @@
+Step 2: Create .env.example
+PORT=3000
+
+
+Create a local .env file with the same content. This example only stores the server port; do not add real secrets to .env.example
