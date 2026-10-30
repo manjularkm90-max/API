@@ -1,0 +1,25 @@
+Step 5: Create src/controllers/productController.js
+The controller validates incoming data, calls the service, and returns HTTP responses.
+
+const productService = require("../services/productService");
+
+function parseId(value) {
+    const id = Number(value);
+    return Number.isInteger(id) && id > 0 ? id : null;
+}
+
+function validateProduct(body, partial = false) {
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+        return "Request body must be a JSON object";
+    }
+
+    const allowedFields = ["name", "price"];
+    const keys = Object.keys(body);
+
+    if (keys.some(key => !allowedFields.includes(key))) {
+        return "Unknown product field";
+    }
+
+    if (!partial || body.name !== undefined) {
+        if (typeof body.name !== "string" || !body.name.trim()) {
+            return "Nam
