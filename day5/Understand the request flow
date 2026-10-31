@@ -1,0 +1,19 @@
+Client / Postman
+
+Sends an HTTP request
+
+Routes
+
+Matches method and URL
+
+Controller
+
+Validates input and prepares response
+
+Service
+
+Executes business logic
+
+HTTP Response
+
+Status code + JSON data
