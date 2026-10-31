@@ -1,0 +1,8 @@
+Step 10: Update package.json
+Inside the existing scripts section, set the start command:
+"scripts": {
+  "start": "node src/server.js"
+}
+
+
+Keep the dependencies that npm has already added to your package.json; don't replace the whole file with only the snippet above.
