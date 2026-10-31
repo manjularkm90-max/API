@@ -1,0 +1,30 @@
+Start the server:
+npm start
+
+
+Test these endpoints in Postman:
+Method	URL	Expected result
+GET	http://localhost:3000/health	200 OK
+GET	http://localhost:3000/api/products	200 OK
+GET	http://localhost:3000/api/products/1	200 OK
+POST	http://localhost:3000/api/products	201 Created
+PATCH	http://localhost:3000/api/products/1	200 OK
+DELETE	http://localhost:3000/api/products/2	204 No Content
+GET	http://localhost:3000/unknown	404 Not Found
+
+For POST, select Body → raw → JSON and send:
+{
+  "name": "Monitor",
+  "price": 7500
+}
+
+
+For PATCH, send:
+{
+  "price": 8200
+}
+
+
+A successful PATCH changes the price without replacing the product's name.
+
+Note: the service currently stores products in an array, so data is temporary and will reset when the server restarts. A database connection is a good next step.
