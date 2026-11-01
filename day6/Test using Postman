@@ -1,0 +1,56 @@
+Base URL: http://localhost:3000
+POST
+Create student
+
+/api/students
+
+Body → raw → JSON:
+{
+  "name": "Manjula",
+  "email": "manjula@example.com",
+  "department": "IT",
+  "year": 4
+}
+
+
+Expected: 201 Created
+
+
+
+GET
+Get all students
+
+/api/students
+
+Expected: 200 OK and saved student records.
+
+
+
+GET
+Get one student
+
+/api/students/STUDENT_ID
+
+Replace STUDENT_ID with the _id returned by the POST request.
+
+
+
+PATCH
+Update student
+
+/api/students/STUDENT_ID
+{
+  "department": "Computer Science"
+}
+
+
+Expected: 200 OK
+
+
+
+DELETE
+Delete student
+
+/api/students/STUDENT_ID
+
+Expected: 200 OK
