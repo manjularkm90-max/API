@@ -1,0 +1,81 @@
+MongoDB and NoSQL fundamentals
+
+Database, collection, and document
+
+Mongoose schemas and models
+
+MongoDB connection using environment variables
+
+CRUD operations
+
+Request validation and error handling
+
+HTTP status codes
+
+API testing with Postman
+
+Technologies
+
+Node.js
+
+Express.js
+
+MongoDB
+
+Mongoose
+
+dotenv
+
+Postman
+
+API Endpoints
+
+Method
+
+Endpoint
+
+Purpose
+
+GET
+
+/health
+
+Check API status
+
+POST
+
+/api/students
+
+Create a student
+
+GET
+
+/api/students
+
+Get all students
+
+GET
+
+/api/students/
+
+Get one student
+
+PATCH
+
+/api/students/
+
+Update a student
+
+DELETE
+
+/api/students/
+
+Delete a student
+
+Learning Outcome
+
+Built a REST API that stores student records in MongoDB and supports CRUD operations.
+
+Security Note
+
+Database credentials are stored in .env. The .env file is excluded from Git using .gitignore.
