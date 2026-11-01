@@ -1,0 +1,34 @@
+Authentication: User yaaru nu verify pannradhu.
+
+Authorization: Verified user-ku enna access permission irukku nu check pannradhu.
+
+Example:
+- Login with email and password → Authentication.
+- Admin page access permission → Authorization.
+JWT: Login successful aana piragu server issue pannura signed token. Client adha request header-la send pannum.
+
+bcrypt: Password-ah hash panni database-la store panna use aagum. Original password-ah database-la store panna koodadhu.
+2. JWT authentication flow
+1. User registers / logs in
+
+Email + Password
+
+
+2. Server verifies credentials
+
+MongoDB + bcrypt
+
+
+3. JWT token generated
+
+Signed using secret key
+
+
+4. Client sends token
+
+Authorization: Bearer TOKEN
+
+
+5. Middleware verifies token
+
+Valid → Protected API access
