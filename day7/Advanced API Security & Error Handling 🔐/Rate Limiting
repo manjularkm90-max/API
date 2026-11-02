@@ -1,0 +1,31 @@
+Rate limiting means oru IP address specific time period-la evlo requests send panna mudiyum nu limit set pannradhu.
+
+Example:
+- Maximum requests: 5
+- Time window: 1 minute
+- 6th request: 429 Too Many Requests
+Install:
+npm install express-rate-limit
+
+
+Create middleware/rateLimiter.js:
+const rateLimit = require("express-rate-limit");
+
+const apiLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  limit: 5,
+  message: {
+    message: "Too many requests. Please try again later."
+  },
+  standardHeaders: "draft-8",
+  legacyHeaders: false
+});
+
+module.exports = apiLimiter;
+
+
+Explanation:
+- windowMs — time window.
+- limit — maximum allowed requests per window.
+- 429 — too many requests response.
+- standardHeaders — rate-limit information in response headers.
