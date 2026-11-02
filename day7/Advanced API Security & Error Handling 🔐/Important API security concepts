@@ -1,0 +1,9 @@
+Concept	Purpose
+Rate Limiting	Too many requests prevent pannum
+Helmet	HTTP security headers set pannum
+CORS	Which origins can access API nu control pannum
+Validation	Invalid input reject pannum
+Authentication	User identity verify pannum
+Authorization	Access permission check pannum
+Error Handling	Errors-ah safely manage pannum
+Logging	API activity record pannum
