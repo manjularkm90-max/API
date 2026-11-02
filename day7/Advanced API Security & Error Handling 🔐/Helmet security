@@ -1,0 +1,16 @@
+Helmet helps secure Express applications by setting HTTP security headers.
+
+Install:
+npm install helmet
+
+
+Usage:
+const helmet = require("helmet");
+
+app.use(helmet());
+
+
+Helmet helps set headers such as:
+- Content-Security-Policy
+- X-Content-Type-Options
+- Strict-Transport-Security (when applicable)
