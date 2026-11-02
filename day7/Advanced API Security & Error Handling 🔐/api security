@@ -1,0 +1,7 @@
+API security means protecting an API from unauthorized access, malicious requests, invalid data, and attacks.
+
+Example:
+
+Oru login API irukku nu vachukko. Oru person continuous-ah 1,000 login requests send pannina server overload aagalaam.
+
+Indha madhiri issues-ah prevent panna security methods use pannuvom
