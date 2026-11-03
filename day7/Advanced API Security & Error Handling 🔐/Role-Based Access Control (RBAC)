@@ -1,0 +1,39 @@
+RBAC means user role based on access permissions provide pannradhu.
+
+Example:
+Role	Permission
+User	View own profile
+Admin	View all users
+Manager	View reports
+
+Authentication verifies who the user is. Authorization checks what the user is allowed to do.
+Create middleware/roleMiddleware.js
+function authorizeRoles(...allowedRoles) {
+  return (req, res, next) => {
+    if (!req.user || !allowedRoles.includes(req.user.role)) {
+      return res.status(403).json({
+        message: "Access forbidden"
+      });
+    }
+
+    next();
+  };
+}
+
+module.exports = authorizeRoles;
+
+
+Usage with JWT authentication:
+const authMiddleware = require("./middleware/authMiddleware");
+const authorizeRoles = require("./middleware/roleMiddleware");
+
+app.get(
+  "/api/admin/dashboard",
+  authMiddleware,
+  authorizeRoles("admin"),
+  (req, res) => {
+    res.json({
+      message: "Welcome Admin"
+    });
+  }
+);
