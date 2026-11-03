@@ -1,0 +1,24 @@
+Morgan is an HTTP request logger middleware for Express.
+
+Install:
+npm install morgan
+
+
+Use in server.js:
+const morgan = require("morgan");
+
+app.use(morgan("dev"));
+
+
+Example terminal output:
+GET /api/users 200
+POST /api/users 201
+GET /unknown 404
+
+
+Why logging?
+- Monitor API requests.
+- Identify errors.
+- Debug application issues.
+- Track server activity.
+Never log passwords, JWT tokens, or sensitive personal data
