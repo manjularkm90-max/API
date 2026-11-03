@@ -1,0 +1,25 @@
+Login endpoint-ku stricter rate limit use pannalaam.
+
+Create middleware/loginLimiter.js:
+const rateLimit = require("express-rate-limit");
+
+const loginLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 5,
+  message: {
+    message: "Too many login attempts. Try again later."
+  },
+  standardHeaders: "draft-8",
+  legacyHeaders: false
+});
+
+module.exports = loginLimiter;
+
+
+Use it in your login route:
+const loginLimiter = require("./middleware/loginLimiter");
+
+app.use("/api/auth/login", loginLimiter);
+
+
+Interview point: Login rate limiting helps reduce brute-force password attacks. Production systems may also use account-based throttling and monitoring.
