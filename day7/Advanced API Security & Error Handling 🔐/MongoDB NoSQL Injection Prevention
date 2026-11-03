@@ -1,0 +1,51 @@
+Attacker malicious input send panni database query manipulate panna try pannalaam.
+
+Unsafe example:
+const user = await User.findOne({
+  email: req.body.email
+});
+
+
+Better approach: validate the input type and expected format before querying.
+const email = req.body.email;
+
+if (
+  typeof email !== "string" ||
+  !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+) {
+  return res.status(400).json({
+    message: "Invalid email"
+  });
+}
+
+const user = await User.findOne({
+  email: email.toLowerCase().trim()
+});
+
+
+Important: Never accept raw MongoDB query objects directly from users.
+6. API Versioning
+API versioning helps maintain old API clients while introducing new features.
+
+Example:
+/api/v1/users
+/api/v2/users
+
+
+Express example:
+app.get("/api/v1/users", (req, res) => {
+  res.json({
+    version: "v1",
+    message: "User API version 1"
+  });
+});
+
+app.get("/api/v2/users", (req, res) => {
+  res.json({
+    version: "v2",
+    message: "User API version 2"
+  });
+});
+
+
+Interview point: API versioning prevents new changes from unexpectedly breaking existing applications.
